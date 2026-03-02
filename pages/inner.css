@@ -1,0 +1,473 @@
+/* ============================================
+   MURPHY & SONS — INNER PAGES STYLESHEET
+   ============================================ */
+
+/* --- NAV ACTIVE --- */
+.nav__active {
+  color: var(--navy) !important;
+  font-weight: 600 !important;
+}
+
+/* --- PAGE HERO --- */
+.page-hero {
+  padding: 160px 0 80px;
+  text-align: center;
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 60%, var(--navy-light) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.page-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 400px;
+  background: radial-gradient(ellipse, rgba(201, 168, 76, 0.07) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.page-hero__inner {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.page-hero__inner .section__label {
+  color: var(--gold);
+}
+
+.page-hero__title {
+  font-family: var(--font-display);
+  font-size: clamp(2.8rem, 5vw, 4.5rem);
+  font-weight: 600;
+  line-height: 1.1;
+  color: var(--white);
+  margin: 16px 0 24px;
+  letter-spacing: -0.01em;
+}
+
+.page-hero__title em {
+  font-style: italic;
+  color: var(--gold-light);
+}
+
+.page-hero__sub {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.8;
+  max-width: 560px;
+  margin: 0 auto;
+  font-weight: 300;
+}
+
+/* ============================================
+   TEAM PAGE
+   ============================================ */
+.team__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+  margin-bottom: 28px;
+}
+
+.team__grid--sm {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.team__card {
+  background: var(--white);
+  border: 1px solid var(--mid-grey);
+  border-radius: var(--radius-lg);
+  padding: 32px 28px;
+  transition: all var(--transition);
+}
+
+.team__card:hover {
+  box-shadow: 0 8px 32px rgba(15, 31, 61, 0.08);
+  transform: translateY(-4px);
+  border-color: rgba(15, 31, 61, 0.15);
+}
+
+.team__card--featured {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+}
+
+.team__photo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: rgba(15, 31, 61, 0.06);
+  border: 2px solid rgba(15, 31, 61, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.team__card--featured .team__photo {
+  width: 100px;
+  height: 100px;
+}
+
+.team__photo-placeholder {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--navy);
+  opacity: 0.5;
+}
+
+.team__card--featured .team__photo-placeholder {
+  font-size: 1.2rem;
+}
+
+.team__role {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 8px;
+}
+
+.team__card h3 {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 12px;
+}
+
+.team__card p {
+  font-size: 0.875rem;
+  color: var(--text-mid);
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.team__specialisms {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.team__specialisms span {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--navy);
+  background: rgba(15, 31, 61, 0.06);
+  border: 1px solid rgba(15, 31, 61, 0.1);
+  padding: 4px 10px;
+  border-radius: 100px;
+}
+
+/* Ghost white button for dark CTA */
+.btn--ghost-white {
+  background: transparent;
+  color: var(--white);
+  border: 1.5px solid rgba(255, 255, 255, 0.25);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 32px;
+  border-radius: 4px;
+  font-family: var(--font-main);
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition);
+  white-space: nowrap;
+}
+
+.btn--ghost-white:hover {
+  border-color: var(--white);
+  transform: translateY(-2px);
+}
+
+/* ============================================
+   CONTACT PAGE
+   ============================================ */
+.contact-info__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.contact-info__card {
+  background: var(--white);
+  border: 1px solid var(--mid-grey);
+  border-radius: var(--radius-lg);
+  padding: 32px 24px;
+  transition: all var(--transition);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.contact-info__card:hover {
+  box-shadow: 0 8px 32px rgba(15, 31, 61, 0.08);
+  transform: translateY(-4px);
+  border-color: rgba(15, 31, 61, 0.15);
+}
+
+.contact-info__icon {
+  width: 36px;
+  height: 36px;
+  color: var(--navy);
+  opacity: 0.6;
+  margin-bottom: 8px;
+}
+
+.contact-info__icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.contact-info__card h3 {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--navy);
+}
+
+.contact-info__card p {
+  font-size: 0.825rem;
+  color: var(--text-mid);
+  line-height: 1.6;
+}
+
+.contact-info__card span {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--gold);
+  margin-top: 4px;
+}
+
+.consultation-form__inner {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 80px;
+  align-items: flex-start;
+}
+
+.consultation-form__title {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  font-weight: 600;
+  color: var(--navy);
+  margin: 12px 0 20px;
+  line-height: 1.2;
+}
+
+.consultation-form__body {
+  font-size: 0.9rem;
+  color: var(--text-mid);
+  line-height: 1.8;
+  margin-bottom: 32px;
+}
+
+.consultation-notes {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 40px;
+}
+
+.consultation-note {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.875rem;
+  color: var(--text-mid);
+}
+
+.note-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--gold);
+  box-shadow: 0 0 6px rgba(201, 168, 76, 0.4);
+  flex-shrink: 0;
+}
+
+.consultation-direct {
+  border-top: 1px solid var(--mid-grey);
+  padding-top: 32px;
+}
+
+.consultation-direct h4 {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-light);
+  margin-bottom: 16px;
+}
+
+.consultation-direct a {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--text-mid);
+  margin-bottom: 8px;
+  transition: color var(--transition);
+}
+
+.consultation-direct a:hover {
+  color: var(--navy);
+}
+
+/* FORMS */
+.form__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form__group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.form__group label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-mid);
+  letter-spacing: 0.03em;
+}
+
+.form__group label span {
+  color: var(--gold);
+}
+
+.form__group input,
+.form__group select,
+.form__group textarea {
+  background: var(--off-white);
+  border: 1px solid var(--mid-grey);
+  border-radius: 4px;
+  padding: 14px 16px;
+  font-family: var(--font-main);
+  font-size: 0.9rem;
+  color: var(--text-dark);
+  transition: border-color var(--transition);
+  outline: none;
+  width: 100%;
+}
+
+.form__group input::placeholder,
+.form__group textarea::placeholder {
+  color: rgba(74, 85, 104, 0.35);
+}
+
+.form__group input:focus,
+.form__group select:focus,
+.form__group textarea:focus {
+  border-color: var(--navy);
+  background: var(--white);
+}
+
+.form__group select {
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%230F1F3D' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  padding-right: 40px;
+  background-color: var(--off-white);
+}
+
+.form__group select option {
+  background: var(--white);
+  color: var(--text-dark);
+}
+
+.form__group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.btn--full {
+  width: 100%;
+  justify-content: center;
+}
+
+.form__success {
+  display: none;
+  align-items: center;
+  gap: 12px;
+  margin-top: 20px;
+  padding: 16px 20px;
+  background: rgba(201, 168, 76, 0.06);
+  border: 1px solid rgba(201, 168, 76, 0.2);
+  border-radius: 4px;
+}
+
+.form__success.visible {
+  display: flex;
+}
+
+.form__success p {
+  font-size: 0.875rem;
+  color: var(--text-mid);
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 1024px) {
+  .team__grid--sm {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .contact-info__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .page-hero {
+    padding: 120px 0 60px;
+  }
+
+  .team__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .team__grid--sm {
+    grid-template-columns: 1fr;
+  }
+
+  .team__card--featured {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .contact-info__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .consultation-form__inner {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .form__row {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-info__grid {
+    grid-template-columns: 1fr;
+  }
+}
