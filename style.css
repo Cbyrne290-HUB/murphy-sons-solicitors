@@ -868,3 +868,36 @@ img {
     font-size: 2.5rem;
   }
 }
+
+/* --- IMAGE BREAK --- */
+.img-break {
+  position: relative;
+  height: 480px;
+  overflow: hidden;
+}
+
+.img-break img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.img-break__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 31, 61, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img-break__overlay p {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.88);
+  letter-spacing: 0.03em;
+  text-align: center;
+  padding: 0 2rem;
+}
